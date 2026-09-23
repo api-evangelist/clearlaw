@@ -1,23 +1,62 @@
 aid: clearlaw
+
 name: ClearLaw
-description: 'ClearLaw is a company surfaced via the API Evangelist harvest backlog (source: legal) and
-  added to the network as a stub for full-pipeline profiling.'
+
+image: https://clearlaw.ai/assets/og/clearlaw.png
+
+description: 'ClearLaw provides AI‑powered legal data extraction and contract intelligence solutions. Their platform integrates with existing CLM systems and litigation workflows, delivering accurate answers from legal documents for law firms, enterprises, and public sector clients. Services include contract migration, regulatory compliance assistance, and real‑time legal analytics, all deployed within customers’ existing tools.'
+
 url: https://raw.githubusercontent.com/api-evangelist/clearlaw/refs/heads/main/apis.yml
+
 x-type: company
+
 x-source: harvest:legal
-x-tier: stub
-x-tier-reason: harvest
+
+x-tier: profiled
+x-tier-reason: enrichment pass 2026-09-23 (modular-v1; was harvest)
+
 specificationVersion: '0.20'
+
 created: '2026-09-23'
+
 modified: '2026-09-23'
+
 tags:
 - Company
-apis: []
+- LegalTech
+- AI
+- DataExtraction
+- ContractIntelligence
+
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+
 common:
+- type: Hosts
+  url: hosts/clearlaw-hosts.yml
+- type: Vendors
+  url: vendors/clearlaw-vendors.yml
+- type: DomainSecurity
+  url: security/clearlaw-domain-security.yml
 - type: Website
   url: https://www.clearlaw.ai/
+
+apis: []
+
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: No public developer program or API documentation was found for ClearLaw.
+  evidence:
+    - url: https://clearlaw.ai
+      status: 200
+  checked: 2026-09-23
+x-enrichment:
+  date: '2026-09-23'
+  status: enriched
+  artifacts_added: 5
+  pass: modular-v1
+  engine: identity=local,contract=local,surfaces=local,docs=local
